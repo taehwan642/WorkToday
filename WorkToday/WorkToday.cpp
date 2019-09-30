@@ -4,8 +4,7 @@
 #include <stdio.h>
 #include <fstream>
 #include <iostream>
-
-
+#include <string>
 #define MAX_SIZE 1000
 using namespace std;
 void StartToday(Pilot* today)
@@ -22,11 +21,22 @@ void AddToday(Pilot* today)
 	fputs(today->All, fp);
 	fclose(fp);
 }
-
-void Other()
+void OutPutToday()
 {
 	char inputString[MAX_SIZE];
 
+	ifstream inFile("WorkToday.txt");
+	while (!inFile.eof())
+	{
+		inFile.getline(inputString, 100);
+		cout << inputString << endl;
+	}
+	inFile.close();
+}
+void Other()
+{
+	char inputString[MAX_SIZE];
+	
 	// 파일 입력 (쓰기)
 	ofstream outFile("output.txt");
 
@@ -75,7 +85,8 @@ int main(void)
 		break;
 	case 3:
 	{
-		//파일 출력하기. in_line이었나 거기에다가 string in 적고 개지랄했던것같음;
+		system("cls");
+		OutPutToday();
 		break;
 	}
 	default:

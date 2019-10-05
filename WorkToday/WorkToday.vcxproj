@@ -124,10 +124,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="WorkToday.cpp" />
+    <ClCompile Include="WorkTodayTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Struct.h" />
     <ClInclude Include="WorkToday.h" />
+    <ClInclude Include="WorkTodayTest.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

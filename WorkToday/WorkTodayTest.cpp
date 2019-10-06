@@ -25,9 +25,7 @@ void First()
 
 void Test()
 {
-//	FILE* fp = fopen("WorkToday.txt", "a");
-	char String[MAX];
-
+	
 
 }
 

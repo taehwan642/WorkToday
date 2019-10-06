@@ -10,6 +10,7 @@ using namespace std;
 void StartToday(Pilot* today)
 {
 	FILE* fp = fopen("WorkToday.txt", "w+");
+	//cin.getline(today->All, 60);
 	fputs(today->All, fp);
 	fclose(fp);
 }
@@ -53,6 +54,7 @@ void Other()
 		cout << inputString << endl;
 	}
 	inFile.close();
+	//fgets() is usable too.
 }
 
 void GANG()

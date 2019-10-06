@@ -9,7 +9,6 @@
 using namespace std;
 void StartToday(Pilot* today)
 {
-	//FILE* fp = fopen("C:\\Users\\taehw\\OneDrive\\바탕 화면\\WorkToday-master\\WorkToday\\WorkToday.txt", "w+");
 	FILE* fp = fopen("WorkToday.txt", "w+");
 	fputs(today->All, fp);
 	fclose(fp);
@@ -17,7 +16,8 @@ void StartToday(Pilot* today)
 
 void AddToday(Pilot* today)
 {
-	FILE* fp = fopen("C:\\Users\\taehw\\OneDrive\\바탕 화면\\WorkToday-master\\WorkToday\\WorkToday.txt", "a");
+	
+	FILE* fp = fopen("WorkToday.txt", "a");
 	fputs("\n", fp);
 	fputs(today->All, fp);
 	fclose(fp);
@@ -38,7 +38,6 @@ void Other()
 {
 	char inputString[MAX_SIZE];
 	
-	// 파일 입력 (쓰기)
 	ofstream outFile("output.txt");
 
 	for (int i = 0; i < 10; i++) {
@@ -46,7 +45,7 @@ void Other()
 	}
 
 	outFile.close();
-	//파일 출력 (읽기)
+	
 	ifstream inFile("output.txt");
 
 	while (!inFile.eof()) {
@@ -95,7 +94,7 @@ void GANG()
 	}
 	return;
 }
-//fgets 입력 및 받아오기 실행 시켜줘야함;
+
 int main(void)
 {
 	GANG();

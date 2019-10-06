@@ -25,7 +25,8 @@ void First()
 
 void Test()
 {
-	
-
+	char a[60];
+	cin.getline(a, 60);
+	cout << a << endl;
 }
 

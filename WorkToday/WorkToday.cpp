@@ -9,18 +9,20 @@
 using namespace std;
 void StartToday(Pilot* today)
 {
+	char a[60];	
 	FILE* fp = fopen("WorkToday.txt", "w+");
-	//cin.getline(today->All, 60);
-	fputs(today->All, fp);
+	/*cin.getline(a, 60);
+	fputs(a, fp);*/
 	fclose(fp);
 }
 
 void AddToday(Pilot* today)
 {
-	
+
 	FILE* fp = fopen("WorkToday.txt", "a");
 	fputs("\n", fp);
 	fputs(today->All, fp);
+
 	fclose(fp);
 }
 void OutPutToday()
@@ -38,15 +40,14 @@ void OutPutToday()
 void Other()
 {
 	char inputString[MAX_SIZE];
-	
-	ofstream outFile("output.txt");
 
-	for (int i = 0; i < 10; i++) {
-		outFile << i << endl;
-	}
+	ofstream outFile("output.txt");
+	char a[60];
+	cin.getline(a, 60);
+	outFile << a << endl;
 
 	outFile.close();
-	
+
 	ifstream inFile("output.txt");
 
 	while (!inFile.eof()) {
@@ -96,9 +97,7 @@ void GANG()
 	}
 	return;
 }
-
 int main(void)
 {
-	GANG();
-	return 0;
+	Other();
 }
